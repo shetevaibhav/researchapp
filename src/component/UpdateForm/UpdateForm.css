@@ -1,0 +1,19 @@
+.createStudybtn
+{
+    margin-left: 65%;
+    width: 180px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.contactForm
+{
+    border: 5px solid rgb(108, 153, 168);
+    border-radius: 10px;
+    padding: 3%;
+    font-weight: bold;
+    margin-top: 10px;
+} 
+
+.addContactButton{
+    margin-left: 80%;
+}
