@@ -16,9 +16,7 @@ const Dashboard = () => {
    const [data,setdata]=useState([])
    const navigate = useNavigate();
    const [condition,setContidion]=useState(false)
-  // const [disableComplete,setDisableComplete]=useState(false)
    
-
    const getStudy=()=>{
          axios
      .get("http://localhost:8080/api/v2/study")
@@ -40,10 +38,9 @@ const Dashboard = () => {
   });
 }
 
-const updateStatus=async id=>{
- 
+const updateStatus=id=>{
   setContidion(true)
-  axios.put("http://localhost:8080/api/v2/study/status/"+id)
+  axios.patch("http://localhost:8080/api/v2/study/status/"+id)
  .then(() =>{
   // toast.info(" Status updated !");
   getStudy()

@@ -46,7 +46,7 @@ const UpdateForm = () => {
    const updateSubmitHandler=(event)=>{
     event.preventDefault();
     axios
-    .put("http://localhost:8080/api/v2/study/"+id,data)
+    .patch("http://localhost:8080/api/v2/study/"+id,data)
     .then((res)=>{
       console.log("data save succefully-> " ,res)
 
@@ -56,17 +56,13 @@ const UpdateForm = () => {
 
     }).catch((err)=>{console.log("data posting failed ->",err)})
    }
+
    const nameHandler=(event)=>{
     let item = event.target.value;
 
     if (item === "" || item.length < 4 || !isNaN(item) || item.length > 50) {
       toast.error("Fill Study Name Valid !");
     } 
-    else {
-
-
-      
-    }
   }
   const descHandler=(event)=>{
     let item = event.target.value;
